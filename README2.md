@@ -1,5 +1,11 @@
-# MedicalQA
-> 의료 지식 그래프와 임상 진료지침을 활용한 GraphRAG 기반 의료 질의응답 시스템
+<p align="center">
+  <img src="./docs/images/medicalqa.png" width="100%">
+</p>
+
+<p align="center">
+</p>
+
+## MedicalQA: 의료 지식 그래프와 임상 진료지침을 활용한 GraphRAG 기반 의료 질의응답 시스템
 
 ### 1. 프로젝트 배경
 
