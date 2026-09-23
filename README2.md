@@ -143,7 +143,7 @@ MedicalQA는 사용자의 질문을 입력받아 **질문 재구성 → 의료 �
 
 ##### 4.2.3. 답변 근거 확인
 
-![MedicalQA 답변 근거 화면](./docs/images/evidence_screen.png)
+![MedicalQA 답변 근거 화면](./docs/images/answer_screen2.png)
 
 생성된 답변에 활용된 임상 진료지침과 의료 지식 정보를 사용자가 직접 확인할 수 있도록 **답변 생성 근거**를 제공한다.
 
@@ -153,7 +153,7 @@ MedicalQA는 사용자의 질문을 입력받아 **질문 재구성 → 의료 �
 
 ##### 4.2.4. 임상 진료지침 검색
 
-![MedicalQA 임상 진료지침 화면](./docs/images/guideline_screen.png)
+![MedicalQA 임상 진료지침 화면](./docs/images/evidence_guideline.png)
 
 질문과 관련된 NICE 및 WHO 임상 진료지침을 검색하여 답변 생성에 활용하며, 사용자는 검색된 진료지침의 출처와 관련 내용을 확인할 수 있다.
 
@@ -161,7 +161,7 @@ MedicalQA는 사용자의 질문을 입력받아 **질문 재구성 → 의료 �
 
 ##### 4.2.5. 의료 지식 그래프 시각화
 
-![MedicalQA 지식 그래프 화면](./docs/images/knowledge_graph_screen.png)
+![MedicalQA 지식 그래프 화면](./docs/images/evidence_knowledge_graph.png)
 
 질문과 관련된 의료 개념 및 관계를 Neo4j 기반 지식 그래프로 탐색하고, 검색된 노드와 관계를 시각적으로 확인할 수 있다.
 
