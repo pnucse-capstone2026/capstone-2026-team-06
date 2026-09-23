@@ -187,11 +187,11 @@ MedicalQA는 동일한 LLM을 사용하면서 의료 지식 그래프와 임상 
 
 #### 6.1. 프로젝트 소개 자료
 
-**[프로젝트 소개 자료](./docs/03.발표자료/발표자료.pdf)**
+[프로젝트 소개 자료](./docs/03.발표자료/발표자료.pdf)
 
-#### 6.2. 영상
+#### 6.2. 시연 영상
 
-**[MedicalQA 영상]([https://youtu.be/gM6ocnumYhs?si=zQDPR0XMJEgIf_Vz)](https://img.youtube.com/vi/gM6ocnumYhs/0.jpg)](https://youtu.be/gM6ocnumYhs))**
+[![MedicalQA 시연 영상](https://img.youtube.com/vi/gM6ocnumYhs/0.jpg)](https://youtu.be/gM6ocnumYhs)
 
 ### 7. 팀구성
 | 성명  | 구성원별 역할                                                                                                                                                         |
