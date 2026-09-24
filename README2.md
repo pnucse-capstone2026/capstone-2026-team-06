@@ -175,6 +175,32 @@ MedicalQA는 동일한 LLM을 사용하면서 의료 지식 그래프와 임상 
 
 #### 4.4. 디렉토리 구조
 
+```text
+MedicalQA/
+├── backend/                              # FastAPI 기반 백엔드
+│   ├── api.py                            # API 엔드포인트
+│   ├── pipeline.py                       # 질의응답 처리 파이프라인
+│   ├── database/                         # PostgreSQL 데이터 관리
+│   ├── db/                               # Neo4j 지식 그래프 검색
+│   ├── services/                         # 의료 검색 및 LLM 서비스
+│   ├── Dockerfile                        # 백엔드 Docker 설정
+│   └── requirements.txt                  # Python 의존성
+│
+├── frontend/                             # React + Vite 기반 프론트엔드
+│   └── src/
+│       ├── api/                           # 백엔드 API 통신
+│       ├── components/
+│       │   ├── Chat/                      # 의료 질의응답 화면
+│       │   ├── EvidenceModal/             # 답변 근거 및 지식 그래프
+│       │   ├── Sidebar/                   # 채팅 목록 관리
+│       │   └── ...                        # 기타 UI 컴포넌트
+│       ├── App.jsx                        # 메인 애플리케이션
+│       └── main.jsx                       # 애플리케이션 진입점
+│
+├── evaluation/                            # 모델 및 시스템 평가
+├── scripts/                               # 데이터 및 지식 그래프 구축 스크립트
+└── docker-compose.yml                     # 전체 서비스 구성
+
 ### 5. 설치 및 실행 
 
 #### 5.1. 설치 및 실행 방법
