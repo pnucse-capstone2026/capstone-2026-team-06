@@ -175,9 +175,78 @@ MedicalQA는 동일한 LLM을 사용하면서 의료 지식 그래프와 임상 
 
 #### 4.4. 디렉토리 구조
 
+```text
+MedicalQA/
+├── backend/                              # FastAPI 기반 백엔드
+│   ├── api.py                            # API 엔드포인트
+│   ├── pipeline.py                       # 질의응답 처리 파이프라인
+│   ├── database/                         # PostgreSQL 데이터 관리
+│   ├── db/                               # Neo4j 지식 그래프 검색
+│   ├── services/                         # 의료 검색 및 LLM 서비스
+│   ├── Dockerfile                        
+│   └── requirements.txt                  
+│
+├── frontend/                             # React + Vite 기반 프론트엔드
+│   └── src/
+│       ├── api/                           # 백엔드 API 통신
+│       ├── components/
+│       │   ├── Chat/                      # 의료 질의응답 화면
+│       │   ├── EvidenceModal/             # 답변 근거 및 지식 그래프
+│       │   ├── Sidebar/                   # 채팅 목록 관리
+│       │   └── ...                        # 기타 UI 컴포넌트
+│       ├── App.jsx                        
+│       └── main.jsx                       
+│
+├── evaluation/                            # 모델 및 시스템 평가
+├── scripts/                               # 데이터 및 지식 그래프 구축 스크립트
+└── docker-compose.yml                     
+```
+
 ### 5. 설치 및 실행 
 
-#### 5.1. 설치 및 실행 방법
+본 프로젝트는 Docker 및 Docker Compose 환경에서 개발되었으며, Docker Compose를 통해 MedicalQA의 각 서비스를 통합 실행할 수 있다.
+
+#### 5.1 프로젝트 다운로드
+
+다음 명령어로 프로젝트를 다운로드하고 프로젝트 디렉토리로 이동한다.
+
+```bash
+git clone https://github.com/pnucse-capstone2026/capstone-2026-team-06.git
+cd capstone-2026-team-06
+```
+
+#### 5.2 환경 변수 설정
+
+프로젝트 실행에 필요한 환경 변수를 .env 파일에 설정한다.
+
+#### 5.3 프로젝트 빌드 및 실행
+
+다음 명령어를 통해 MedicalQA의 전체 서비스를 빌드하고 실행한다.
+```bash
+docker compose build
+docker compose up -d
+```
+
+#### 5.4 실행 상태 확인
+
+실행 중인 Docker 서비스를 확인한다.
+```bash
+docker compose ps
+```
+
+#### 5.5 서비스 접속
+
+서비스가 정상적으로 실행되면 웹 브라우저에서 다음 주소로 접속한다.
+```bash
+http://localhost:2042
+```
+
+#### 5.6 서비스 종료
+
+실행 중인 서비스를 종료하려면 다음 명령어를 사용한다.
+```bash
+docker compose down
+```
 
 ### 6. 소개 자료
 
