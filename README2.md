@@ -182,7 +182,9 @@ MedicalQA/
 │   ├── pipeline.py                       # 질의응답 처리 파이프라인
 │   ├── database/                         # PostgreSQL 데이터 관리
 │   ├── db/                               # Neo4j 지식 그래프 검색
-│   └── services/                         # 의료 검색 및 LLM 서비스
+│   ├── services/                         # 의료 검색 및 LLM 서비스
+│   ├── Dockerfile                        
+│   └── requirements.txt                  
 │
 ├── frontend/                             # React + Vite 기반 프론트엔드
 │   └── src/
@@ -192,11 +194,12 @@ MedicalQA/
 │       │   ├── EvidenceModal/             # 답변 근거 및 지식 그래프
 │       │   ├── Sidebar/                   # 채팅 목록 관리
 │       │   └── ...                        # 기타 UI 컴포넌트
-│       ├── App.jsx                        # 메인 애플리케이션
-│       └── main.jsx                       # 애플리케이션 진입점
+│       ├── App.jsx                        
+│       └── main.jsx                       
 │
 ├── evaluation/                            # 모델 및 시스템 평가
-└── scripts/                               # 데이터 및 지식 그래프 구축 스크립트
+├── scripts/                               # 데이터 및 지식 그래프 구축 스크립트
+└── docker-compose.yml                     
 ```
 
 ### 5. 설치 및 실행 
