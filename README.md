@@ -92,20 +92,22 @@ Neo4j 의료 지식 그래프, Qdrant 벡터 데이터베이스, PostgreSQL, Oll
 
 #### 3.2. 기술 스택
 
-| 구분              | 기술                            | 주요 역할                   |
-| --------------- | ----------------------------- | ----------------------- |
-| Frontend        | React, Vite                   | 웹 사용자 인터페이스 구현          |
-| Backend         | FastAPI, Python               | REST API 및 질의응답 처리      |
-| LLM             | Gemma4, Ollama                | 의료 질의응답 생성 및 번역         |
-| Knowledge Graph | Neo4j 5 Community             | 의료 지식 그래프 저장 및 그래프 탐색   |
-| Vector DB       | Qdrant                        | 의료 개념 및 임상 진료지침 벡터 검색   |
-| Database        | PostgreSQL 17                 | 채팅 및 메시지 데이터 저장         |
-| Embedding       | BAAI/bge-base-en-v1.5         | 의료 개념 및 문서 임베딩          |
-| NLP             | SciSpacy, en_core_sci_scibert | 의료 개념 Mention Detection |
-| Search          | BM25, Embedding Search        | 의료 개념 Hybrid Search     |
-| Data            | SNOMED CT, RxNorm, LOINC      | 의료 표준 용어 및 지식 그래프 구축    |
-| Guideline       | NICE, WHO                     | 임상 진료지침 데이터 구축          |
-| Infrastructure  | Docker, Docker Compose        | 서비스 컨테이너화 및 통합 실행       |
+| 구분 | 기술 | 주요 역할 |
+|---|---|---|
+| **Frontend** | React, Vite | 웹 사용자 인터페이스 구현 |
+| **Backend** | FastAPI, Python | REST API 및 질의응답 처리 |
+| **LLM** | Gemma4 | 의료 질의응답 생성 및 번역 |
+| **LLM Runtime** | Ollama | Gemma 모델 실행 및 관리 |
+| **Knowledge Graph** | Neo4j 5 Community | 의료 지식 그래프 저장 및 그래프 탐색 |
+| **Vector DB** | Qdrant | 의료 개념 및 임상 진료지침 벡터 검색 |
+| **Database** | PostgreSQL 17 | 사용자 채팅 및 메시지 데이터 저장 |
+| **Embedding** | BAAI/bge-base-en-v1.5 | 의료 개념 및 임상 진료지침 임베딩 |
+| **NLP** | SciSpaCy, en_core_sci_scibert | 의료 개념 Mention Detection |
+| **Entity Linking** | BM25, Embedding Search | 의료 개념 검색 및 Entity Linking |
+| **Search** | BM25, Hybrid Search | 의료 개념 검색 및 Hybrid Search |
+| **Data** | SNOMED CT, RxNorm, LOINC | 의료 표준 용어 및 지식 그래프 구축 |
+| **Guideline** | NICE, WHO | 임상 진료지침 데이터 구축 |
+| **Infrastructure** | Docker, Docker Compose | 서비스 컨테이너화 및 통합 실행 |
 
 ### 4. 개발 결과
 
@@ -174,6 +176,8 @@ MedicalQA의 성능을 평가하기 위해 의료 객관식 질의응답 데이�
 MedicalQA는 동일한 LLM을 사용하면서 의료 지식 그래프와 임상 진료지침 검색 결과를 추가적으로 활용하였으며, 평가 결과 Gemma4-only 대비 **11.8%p 높은 정확도**를 기록하였다.
 
 #### 4.4. 디렉토리 구조
+
+MedicalQA의 주요 디렉토리 및 구성 파일은 다음과 같다.
 
 ```text
 MedicalQA/
