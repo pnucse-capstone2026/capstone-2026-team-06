@@ -1,0 +1,20 @@
+.date-header{
+    display:flex;
+    justify-content:center;
+
+    margin:28px 0 18px;
+}
+
+.date-header span{
+
+    padding:6px 14px;
+
+    border-radius:999px;
+
+    background:#F4F6F8;
+
+    color:#7B93A8;
+
+    font-size:15px;
+    font-weight:500;
+}

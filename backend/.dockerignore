@@ -1,0 +1,25 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+**/__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Jupyter
+notebooks/
+scripts/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Neo4j
+neo4j/data/
+neo4j/logs/
+neo4j/plugins/
+
+# Qdrant
+qdrant/storage/

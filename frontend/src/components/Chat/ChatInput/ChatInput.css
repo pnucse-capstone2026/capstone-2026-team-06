@@ -1,0 +1,114 @@
+/* ========================================
+   공통
+======================================== */
+
+.chat-input-container {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-end;
+
+    gap: 16px;
+
+    padding:10px 12px;
+
+    background: #FFFDFB;
+
+    border-radius: 18px;
+
+    border: 1px solid #DCE9EC;
+    box-shadow: 0 4px 12px rgba(15, 159, 168, 0.08);
+
+    box-sizing: border-box;
+}
+
+/* ========================================
+   첫 화면 전용
+======================================== */
+
+.chat-input-container.home{
+    max-width: 840px;
+    margin:42px auto 52px;
+}
+
+
+/* ========================================
+   채팅방 전용
+======================================== */
+
+.chat-input-container.room{
+    max-width: 960px;
+    margin:0;
+}
+
+
+/* ========================================
+   입력창
+======================================== */
+
+.chat-input{
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    padding: 14px 20px;
+
+    font-size:20px;
+
+    resize: none;
+
+    white-space: pre-wrap;
+    word-break: break-word;
+
+    max-height: 200px;
+    overflow-y: hidden;
+
+    box-sizing: border-box;
+}
+
+.chat-input::placeholder {
+    font-size:20px;
+    color:#94A3B8;
+}
+
+/* ========================================
+   입력창 버튼
+======================================== */
+
+.send-button {
+    width:50px;
+    height:50px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border:none;
+    /*border-radius:50%;*/
+    border-radius:14px;
+
+    background:#0F9FA8;
+    color:white;
+
+    cursor:pointer;
+    transition:.2s;
+}
+
+.send-button svg {
+    font-size: 22px;
+    stroke-width: 2.2;
+
+    transform: translateX(2px);
+}
+
+.send-button:hover {
+    background:#13AEB8;
+}
+
+.send-button:disabled {
+    opacity:.5;
+    cursor:not-allowed;
+}

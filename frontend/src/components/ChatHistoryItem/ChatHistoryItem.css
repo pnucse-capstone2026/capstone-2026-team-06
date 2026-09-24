@@ -1,0 +1,130 @@
+.chat-main {
+    flex:1;
+
+    display:flex;
+    align-items:center;
+
+    min-width:0;
+
+    padding:0;
+
+    border:none;
+
+    background:transparent;
+
+    cursor:pointer;
+}
+
+.chat-history-list {
+    flex: 1;
+    overflow-y: auto;
+
+    min-height: 0;
+
+    padding-right: 4px;
+}
+
+.chat-history-item { /*채팅 목록*/
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 10px 10px 13px; /*왼쪽정렬*/
+
+    border: none;
+    border-radius: 10px;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    transition: background .2s ease;
+}
+
+.chat-history-item:hover {
+    background: #E7F4F6;
+}
+
+.chat-history-title { /*채팅 목록 제목*/
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+
+    text-align: left;
+    text-overflow: ellipsis;
+
+    font-size: 18px;
+    color: #2F3E52;
+}
+
+.chat-history-title.active-title {
+    color: #0F9FA8;
+    font-weight: 600;
+}
+
+.chat-history-item.menu-open {
+    background: #E7F4F6;
+}
+
+.chat-more { /*메뉴 버튼*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: transparent;
+
+    padding: 0;
+
+    color: #7B93A8;
+
+    font-size: 20px;
+    cursor: pointer;
+
+    opacity: 0;
+
+    transition:
+        opacity .15s ease,
+        color .15s ease;
+}
+
+.chat-history-item:hover .chat-more {
+    opacity: 1;
+}
+
+.chat-history-item.active .chat-more {
+    opacity: 1;
+    color: #0F9FA8;
+}
+
+.chat-history-item.menu-open .chat-more {
+    opacity: 1;
+}
+
+.chat-history-item.active {
+    background: #E7F4F6;
+}
+
+.chat-more-wrapper {
+    flex-shrink:0;
+}
+
+.chat-title-input{
+    width:100%;
+    box-sizing:border-box;
+    
+    padding:2px 4px;
+
+    border:none;
+    outline:none;
+
+    background:white;
+
+    border-radius:6px;
+
+    font-size:18px;
+
+    color:#2F3E52;
+}

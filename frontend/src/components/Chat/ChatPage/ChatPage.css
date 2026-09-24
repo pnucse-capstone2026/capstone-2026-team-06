@@ -1,0 +1,15 @@
+.chat-page {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    min-width: 0;
+
+    background-color: #FAFCFC;
+
+    padding: 0px 15px;
+
+    overflow: hidden;
+}

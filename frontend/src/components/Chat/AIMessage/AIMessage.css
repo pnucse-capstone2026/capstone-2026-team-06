@@ -1,0 +1,267 @@
+/* ========================================
+   AI Message Container
+======================================== */
+
+.ai-message-container {
+    width: 100%;
+    margin-bottom: 28px;
+}
+
+
+/* ========================================
+   AI Message
+======================================== */
+
+.ai-message {
+    width: 100%;
+}
+
+
+/* ========================================
+   AI Text
+======================================== */
+
+.ai-message-text {
+    width: 100%;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.8;
+
+    color:#2F3E52;
+
+    word-break: break-word;
+}
+
+.ai-message-text p {
+    margin: 0 0 14px;
+}
+
+.ai-message-text ul,
+.ai-message-text ol {
+    margin: 12px 0;
+    padding-left: 28px;
+}
+
+.ai-message-text li {
+    margin: 8px 0;
+}
+
+.ai-message-text strong {
+    font-weight: 700;
+}
+
+/* ========================================
+   Evidence Card
+======================================== */
+
+.evidence-card {
+    width: 100%;
+    
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    margin-top: 18px;
+    padding: 18px 20px;
+
+    background: #F8FBFC;
+
+    border: 1px solid #DCE9EC;
+    border-radius: 16px;
+
+    text-align: left;
+}
+
+
+/* ========================================
+   Evidence Icon
+======================================== */
+
+.evidence-card-icon {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    border-radius: 12px;
+
+    background: #EAF5F6;
+
+    color: #168A93;
+}
+
+.evidence-card-icon svg {
+    font-size: 23px;
+}
+
+
+/* ========================================
+   Evidence Content
+======================================== */
+
+.evidence-card-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.evidence-card-title {
+    margin-bottom: 3px;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.45;
+
+    color: #2F3E52;
+}
+
+.evidence-card-description {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.55;
+
+    color: #607086;
+}
+
+.evidence-card-description strong {
+    font-weight: 700;
+
+    color: #176F77;
+}
+
+
+/* ========================================
+   Evidence CTA
+======================================== */
+
+.evidence-card-action {
+    flex-shrink: 0;
+
+    padding: 10px 18px;
+
+    background: #FFFFFF;
+
+    border: 1px solid #B9DDE0;
+    border-radius: 11px;
+
+    color: #168A93;
+
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.evidence-card-action:hover {
+    background: #EEF7F8;
+
+    border-color: #8FCED3;
+
+    color: #0F747C;
+
+    box-shadow: 0 3px 10px rgba(15, 118, 110, 0.08);
+
+    transform: translateY(-1px);
+}
+
+.evidence-card-action:active {
+    transform: translateY(0);
+}
+
+/* ========================================
+   Evidence Button
+======================================== */
+
+.evidence-button-wrapper{
+
+    display:flex;
+    justify-content:flex-end;
+    align-items: center;
+
+    gap: 5px;
+    position:relative;
+
+    margin: 5px 20px;
+}
+
+.evidence-button{
+    position: relative;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    width:auto;
+    height:auto;
+
+    padding:4px;
+
+    border:none;
+    background:none;
+
+    color:#2F3E52;
+
+    cursor:pointer;
+
+    transition:color .2s ease;
+}
+
+.evidence-button:hover{
+    color:#0F9FA8;
+}
+
+.evidence-button svg{
+    font-size:25px;
+}
+
+/* ========================================
+   Tooltip
+======================================== */
+
+.evidence-tooltip{
+
+    position:absolute;
+
+    top:35px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    padding:6px 11px;
+
+    border-radius:8px;
+
+    background:#1F2937;
+
+    color:white;
+
+    font-size:18px;
+    font-weight: 500;
+
+    white-space:nowrap;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.2s;
+}
+
+.evidence-button:hover .evidence-tooltip{
+
+    opacity:1;
+    visibility:visible;
+}

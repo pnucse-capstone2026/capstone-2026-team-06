@@ -1,0 +1,35 @@
+/* ========================================
+   Chat Header
+======================================== */
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height:70px;
+    padding:0 10px;
+
+    background: #FFFFFF;
+
+    border-bottom: 1px solid #E5E7EB;
+}
+
+
+/* ========================================
+   Chat Title
+======================================== */
+
+.chat-title {
+    margin: 0;
+
+    font-size: 23px;
+    font-weight: 600;
+
+    color: #183153;
+
+    cursor: pointer;
+    user-select: none;
+
+    transition: color .2s ease;
+}

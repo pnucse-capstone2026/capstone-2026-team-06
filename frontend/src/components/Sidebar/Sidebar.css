@@ -1,0 +1,411 @@
+/* ========================================
+   레이아웃
+======================================== */
+
+.sidebar {
+    width: 330px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    flex-shrink: 0;
+
+    padding: 15px 10px;
+
+    box-sizing: border-box;
+    border-right:1px solid #DCE9EC;
+
+    background: #F2FAFB;
+
+    overflow: hidden;
+
+    transition: width .3s ease;
+}
+
+.sidebar.closed {
+    width: 70px;
+}
+
+.sidebar.closed .sidebar-top {
+    border-bottom: none;
+}
+
+
+/* ========================================
+   구조
+======================================== */
+
+.sidebar-top {
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 14px;
+
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.sidebar-content {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 0;
+
+    overflow: hidden;
+}
+
+.sidebar-bottom {
+    flex-shrink: 0;
+
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+/* ========================================
+   햄버거 버튼
+======================================== */
+
+.menu-button {
+    width: 42px;
+    height: 42px; /*hover시 보이는 박스 사이즈*/
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #2F3E52;
+
+    font-size: 23px; /*햄버거 사이즈*/
+
+    cursor: pointer;
+
+    transition: background .2s ease;
+}
+
+.menu-button:hover{
+    background: #E7F4F6;
+}
+
+/* ===========================
+   팀로고 버튼
+=========================== */
+
+.logo-button {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #183153;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        color .2s ease;
+
+    position: relative;
+}
+
+.logo-icon,
+.menu-icon-hover{
+    position: absolute;
+    transition: .2s;
+}
+
+.menu-icon-hover{
+    opacity: 0;
+}
+
+.logo-button:hover .logo-icon{
+    opacity: 0;
+}
+
+.logo-button:hover .menu-icon-hover{
+    opacity: 1;
+}
+
+/* ===========================
+   팀로고
+=========================== */
+
+.team-logo {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #183153;
+
+    font-size: 25px;
+}
+
+/* ===========================
+   새 채팅
+=========================== */
+
+.new-chat-btn {
+    width: 100%;
+    height: 50px;
+
+    margin-top: 12px; /*새 채팅이랑 구분선 사이 간격*/
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 8px; /*+랑 새 채팅 사이 간격*/
+
+    padding: 0 12px; /*왼쪽정렬*/
+
+    border: none;
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: #2F3E52;
+
+    font-size: 19px;
+
+    transition: all .2s ease;
+}
+
+.new-chat-btn:hover {
+    background: #D6EEF2;
+}
+
+.new-chat-icon {
+    font-size: 21px;
+    color: #183153;
+}
+
+/* ========================================
+   Section
+======================================== */
+
+.sidebar-section {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 10px;
+}
+
+.section-header { /*채팅, 지원 질환*/
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 8px 13px; /*왼쪽정렬*/
+
+    border: none;
+    background: transparent;
+
+    color: #183153;
+
+    font-size: 19px;
+    font-weight: 600;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.section-arrow{
+    font-size: 21px;
+
+    color: #7B93A8;
+
+    transition: transform .25s ease;
+}
+
+.section-arrow.open{
+    transform: rotate(180deg);
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+    margin-top: 8px;
+}
+
+/* ========================================
+   채팅 메뉴
+======================================== */
+
+.chat-section {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+    min-height: 0;
+}
+
+.chat-menu { /*메뉴 크기*/
+    width: 150px;
+
+    padding: 6px;
+
+    background: #fff;
+
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+
+    box-shadow: 0 8px 24px rgba(15, 23, 42, .10);
+}
+
+.chat-menu-item {
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 10px;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: transparent;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: .15s;
+}
+
+/*이름 변경*/
+.chat-menu-item.rename,
+.chat-menu-item.rename .chat-menu-icon {
+    color: #2F3E52;
+}
+
+/*삭제*/
+.chat-menu-item.delete,
+.chat-menu-item.delete .chat-menu-icon {
+    color: #D84B4B;
+}
+
+.chat-menu-item.delete:hover {
+    background: #FEF2F2;
+}
+
+.chat-menu-icon {
+    font-size: 17px;
+}
+
+/* ========================================
+   지원 질환
+======================================== */
+
+.disease-list {
+    margin-top: 8px;
+    padding: 0;
+
+    list-style: none;
+}
+
+.disease-item {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px 12px; /*왼쪽정렬*/
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+}
+
+.disease-item:hover {
+    background: #E7F4F6;
+    transform: translateY(-1px);
+}
+
+.disease-item span {
+    font-size: 18px;
+    color: #2F3E52;
+}
+
+.disease-icon {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    font-size: 18px;
+
+    background: #DDF2F6;
+    
+    color: #0F9FA8;
+
+    transition: all .2s ease;
+}
+
+/* ========================================
+   안내 문구
+======================================== */
+
+.sidebar-footer{
+    flex-shrink: 0;
+    padding-top: 20px;
+    border-top: 1px solid #DCE9EC;
+}
+
+.sidebar-notice {
+    display: flex;
+    align-items: flex-start;
+
+    padding-bottom: 5px;
+}
+
+.notice-text {
+    width: 89.5%;
+    margin: 0 auto;
+
+    font-size: 15px;
+    line-height: 1.6;
+
+    color: #475569;
+}
+

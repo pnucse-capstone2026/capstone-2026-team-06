@@ -1,0 +1,108 @@
+/* ========================================
+   Loading Process
+======================================== */
+
+.loading-process {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+
+    padding: 8px 0;
+
+    color: #475569;
+}
+
+
+/* ========================================
+   Loading Step
+======================================== */
+
+.loading-step {
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    color: #94A3B8;
+
+    transition: all .25s ease;
+}
+
+
+/* ========================================
+   Icon
+======================================== */
+
+.loading-icon {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+
+    font-size: 22px;
+}
+
+
+/* ========================================
+   Active
+======================================== */
+
+.loading-step.active {
+
+    color: #2F3E52;
+}
+
+.loading-step.active .loading-icon {
+
+    color: #0F9FA8;
+
+    animation: loadingPulse 1.2s infinite;
+}
+
+
+/* ========================================
+   Completed
+======================================== */
+
+.loading-step.completed {
+
+    color: #64748B;
+}
+
+.loading-step.completed .loading-icon {
+
+    color: #0F9FA8;
+}
+
+
+/* ========================================
+   Animation
+======================================== */
+
+@keyframes loadingPulse {
+
+    0% {
+        transform: scale(1);
+        opacity: .6;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: .6;
+    }
+
+}

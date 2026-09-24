@@ -1,0 +1,32 @@
+/* ========================================
+   User Message
+======================================== */
+
+.user-message-container {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-bottom: 28px;
+}
+
+.user-message {
+    max-width: 69%;
+
+    padding: 16px 24px;
+
+    background: #E6F7F9;
+
+    color: #2F3E52;
+
+    border-radius: 20px;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.7;
+
+    word-break: break-word;
+    
+    /*text-align: justify;
+    text-justify: inter-word; 양쪽정렬*/
+    
+}

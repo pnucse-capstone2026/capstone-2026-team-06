@@ -1,0 +1,115 @@
+services:
+  neo4j:
+    image: neo4j:5-community
+    container_name: medicalqa-neo4j
+    restart: unless-stopped
+
+    ports:
+      - "2038:7474"
+      - "2039:7687"
+
+    environment:
+      NEO4J_AUTH: neo4j/${NEO4J_PASSWORD}
+
+    volumes:
+      - ./neo4j/data:/data
+      - ./neo4j/logs:/logs
+      - ./neo4j/import:/import
+      - ./neo4j/plugins:/plugins
+
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: medicalqa-qdrant
+    restart: unless-stopped
+
+    ports:
+      - "2040:6333"
+      - "2041:6334"
+
+    volumes:
+      - ./qdrant/storage:/qdrant/storage
+
+
+  postgres:
+    image: postgres:17
+    container_name: medicalqa-postgres
+    restart: unless-stopped
+
+    ports:
+      - "2044:5432"
+
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: medicalqa-frontend
+    restart: unless-stopped
+
+    ports:
+      - "2042:5173"
+
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+
+    command: ["npm", "run", "dev", "--", "--host"]
+
+
+  ollama:
+    image: ollama/ollama:0.32.4
+    container_name: ollama
+    restart: unless-stopped
+
+    ports:
+      - "11434:11434"
+
+    volumes:
+      - ollama:/root/.ollama
+      
+    gpus: all
+
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+
+    container_name: medicalqa-backend
+    restart: unless-stopped
+
+    ports:
+      - "2043:8000"
+
+    volumes:
+      - .:/app
+
+    depends_on:
+      - neo4j
+      - qdrant
+      - postgres
+      - ollama
+
+    environment:
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_PORT: ${POSTGRES_PORT}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      NEO4J_PASSWORD: ${NEO4J_PASSWORD}
+      FRONTEND_ORIGIN: ${FRONTEND_ORIGIN}
+
+    gpus: all
+
+
+volumes:
+  ollama:
+  postgres_data:

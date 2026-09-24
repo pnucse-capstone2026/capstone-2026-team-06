@@ -1,0 +1,25 @@
+@font-face {
+    font-family: "Pretendard";
+    src: url("./assets/fonts/PretendardVariable.woff2") format("woff2");
+    font-weight: 45 920;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Pretendard", sans-serif;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #f7f7f8;
+}

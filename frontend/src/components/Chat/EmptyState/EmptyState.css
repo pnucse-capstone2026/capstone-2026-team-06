@@ -1,0 +1,58 @@
+/* ========================================
+   Empty State Layout
+======================================== */
+
+.empty-state {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ========================================
+   Title
+======================================== */
+
+.empty-title {
+    margin: 0;
+
+    font-size: 53px;
+    font-weight: 670;
+
+    color: #183153;
+}
+
+
+/* ========================================
+   Subtitle
+======================================== */
+
+.empty-subtitle {
+    margin-top: 16px;
+
+    font-size: 33px;
+    font-weight: 570;
+
+    color: #0F9FA8;
+}
+
+
+/* ========================================
+   Description
+======================================== */
+
+.empty-description {
+    margin-top: 24px;
+
+    text-align: center;
+
+    font-size: 21px;
+    font-weight: 500;
+
+    line-height: 1.8;
+
+    color: #475569;
+}

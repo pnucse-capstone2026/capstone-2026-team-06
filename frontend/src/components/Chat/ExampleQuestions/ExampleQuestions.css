@@ -1,0 +1,130 @@
+/* ========================================
+   Example Questions
+======================================== */
+
+.example-questions {
+    width: 100%;
+    max-width: 830px;
+
+    margin-top: 36px;
+}
+
+
+/* ========================================
+   Title
+======================================== */
+
+.example-title {
+    margin: 0 5px 25px;
+
+    font-size: 19px;
+    font-weight: 500;
+
+    color: #475569;
+}
+
+
+/* ========================================
+   List
+======================================== */
+
+.question-list {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ========================================
+   Card
+======================================== */
+
+.question-card {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    margin-bottom: 20px;
+    padding: 12px 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #DCE9EC;
+    border-radius: 14px;
+
+    box-shadow: 0 2px 8px rgba(15, 118, 110, 0.05);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.question-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #B9DADD;
+
+    box-shadow: 0 5px 14px rgba(15, 118, 110, 0.10);
+}
+
+/* ========================================
+   Icon
+======================================== */
+
+.question-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    font-size: 19px;
+
+    background: #E8F8F6;
+    color: #0F9FA8;
+}
+
+
+/* ========================================
+   Disease Colors
+======================================== */
+
+.diabetes {
+    background: #e8f2ff;
+}
+
+.hypertension {
+    background: #ffeaea;
+}
+
+.ckd {
+    background: #eaf8ee;
+}
+
+.copd {
+    background: #f1eeff;
+}
+
+
+/* ========================================
+   Text
+======================================== */
+
+.question-text {
+    font-size: 17.5px;
+    font-weight: 500;
+
+    color: #475569;
+
+    line-height: 1.5;
+}
