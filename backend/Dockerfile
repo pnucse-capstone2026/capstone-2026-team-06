@@ -3,7 +3,7 @@ FROM python:3.11-slim
 WORKDIR /app
 
 # requirements 복사
-COPY requirements.txt .
+COPY backend/requirements.txt ./requirements.txt
 
 # pip 업데이트
 RUN pip install --upgrade pip
